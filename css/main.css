@@ -75,3 +75,9 @@ span.sound{
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 }
+
+.playing{
+	transform: scale(1.2);
+	border-color: aqua;
+	border-color: gold;
+}
