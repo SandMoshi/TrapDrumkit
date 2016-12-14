@@ -1,5 +1,6 @@
 window.addEventListener('keydown',function(e){
 		//Send event (e) to the playSound function
+	  playSound(e);
 });
 
 function playSound(e){
