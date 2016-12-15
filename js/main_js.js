@@ -15,11 +15,12 @@ function playSound(e){
 	 key.classList.add("playing");
 	 console.log("const key= " + key);
 	 //--
-	 const keys = document.querySelectorAll(".key");
-	 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 	 //--
 	 audio.currentTime = 0; 
 	 audio.play(); 
+	
+	 const keys = document.querySelectorAll(".key");
+	 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 } 
 
 
