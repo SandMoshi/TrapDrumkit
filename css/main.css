@@ -1,5 +1,5 @@
 body{
-	overflow: hidden;
+	overflow: auto;
 }
 
 #backdrop{
@@ -10,6 +10,8 @@ body{
 	max-width: 1024px;
 	max-height: 768px;
   position: relative;
+	min-height: 300px;
+	margin: auto;
 }
 
 .numpad{
