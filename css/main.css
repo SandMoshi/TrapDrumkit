@@ -3,7 +3,7 @@ body{
 }
 
 #backdrop{
-	background-image: url(../img/audience-1853662_1280.jpg);
+	background-image: url(../img/audience-1853662_1280_optimized.jpg);
 	width: 100vw;
 	height: 100vh;
 	background-size: cover;
@@ -12,6 +12,7 @@ body{
   position: relative;
 	min-height: 300px;
 	margin: auto;
+	background-position: center;
 }
 
 .numpad{
