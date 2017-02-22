@@ -3,15 +3,32 @@ window.addEventListener('keydown',function(e){
 	  playSound(e);
 });
 
+window.addEventListener('click',function(e){
+		//Send event (e) to the playSound function
+	  playSound(e);
+});
+
 function playSound(e){
-	 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+	 var audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+	 //if the keycode doesn't match anything, check to see if element was clicked instead
 	 if(!audio){
-			 console.log('null key pressed..doing nothing');
-			 return;
+		 		console.log(e); //Show which element was clicked
+		 		var datakey = e.target.parentElement.getAttribute("data-key");
+		    audio = document.querySelector(`audio[data-key="`+ datakey +`"]`);
 		 }
+	 //if no audio element matches keycode or click, then do nothing
+	 if(!audio){
+		 	console.log('null key pressed..doing nothing');
+			return;
+	 }
 	 console.log("const audio= " + audio);
 	 //--
-	 const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+	 var key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+	 //If the keycode doesn't match, check to see if element was clicked
+	 if (key === null){
+		 //Try getting it based on click target instead of keycode
+		 key = document.querySelector(`.key[data-key="`+ datakey +`"]`);
+	 }
 	 key.classList.add("playing");
 	 console.log("const key= " + key);
 	 //--
@@ -29,4 +46,4 @@ function removeTransition(e){
 	console.log(this);
 	this.classList.remove("playing"); //remove class and revert to original style
 }
-												
+
