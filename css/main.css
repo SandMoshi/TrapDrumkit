@@ -61,6 +61,7 @@ body{
 	text-shadow: 0 0 5px black;
 	text-align: center;
 	vertical-align: bottom;
+	cursor: pointer; /* For iOs to recognize clicking */
 }
 
 .key:hover{
@@ -77,6 +78,7 @@ kbd{
 	font-family: 'Roboto', sans-serif;
 	display: block;
 	margin-top: 5px;
+	cursor: pointer; /* For iOs to recognize clicking */
 }
 
 span.sound{
@@ -87,6 +89,7 @@ span.sound{
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
+	cursor: pointer; /* For iOs to recognize clicking */
 }
 
 .playing{
