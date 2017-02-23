@@ -37,7 +37,11 @@ function playSound(e){
 	 audio.play(); 
 	
 	 const keys = document.querySelectorAll(".key");
-	 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+	//removed because of arrow function compatibility on iOS
+//	 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+	 keys.forEach(function(key){ 
+		 return key.addEventListener('transitionend', removeTransition);
+	 });
 } 
 
 
