@@ -36,10 +36,10 @@ function playSound(e){
 	 audio.currentTime = 0; 
 	 audio.play(); 
 	
-	 const keys = document.querySelectorAll(".key");
+	 const audiokeys = document.querySelectorAll(".key");
 	//removed because of arrow function compatibility on iOS
 //	 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-	 keys.keys(keys).forEach(function(key){ 
+	 Array.prototype.forEach.call (audiokeys, function(key){ 
 		 key.addEventListener('transitionend', removeTransition);
 	 });
 } 
