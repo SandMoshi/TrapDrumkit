@@ -1,5 +1,9 @@
 body{
+	min-height: 98vh;
 	overflow: auto;
+	background:-webkit-linear-gradient(0deg, #1C1C1C 40%, #494949 90%); 
+	background:-moz-linear-gradient(0deg, #1C1C1C 10%, #494949 90%); 
+	background: linear-gradient(0deg, #1C1C1C 10%, #494949 90%);
 }
 
 body *{
@@ -108,6 +112,19 @@ span.sound{
 	border-color: aqua;
 	border-color: gold;
 }
+/* For large screens */
+@media (min-width: 1024px){
+	#backdrop {
+		position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50% ,0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    left: 50%;
+	}
+}
+
 /*   Fit on iPad  */
 @media (max-width:996px){
 	body{
